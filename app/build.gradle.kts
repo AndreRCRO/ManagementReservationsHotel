@@ -44,4 +44,9 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation(libs.swiperefreshlayout)  
     implementation(libs.recyclerview)
+
+    implementation("androidx.room:room-runtime:2.6.1")
+    annotationProcessor("androidx.room:room-compiler:2.6.1")
+    // Optional - Kotlin Extensions and Coroutines support for Room
+    implementation("androidx.room:room-ktx:2.6.1")
 }

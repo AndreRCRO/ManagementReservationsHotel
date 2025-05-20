@@ -11,7 +11,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.gestionreservas.activity.FormularioLibroActivity;
 import com.example.gestionreservas.activity.FormularioReservaActivity;
+import com.example.gestionreservas.activity.ListadoLibrosActivity;
 import com.example.gestionreservas.activity.ListadoReservasActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -42,5 +44,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, FormularioReservaActivity.class));
             }
         });
+
+        // Configurar clics en las tarjetas
+        findViewById(R.id.cardListadoLibros).setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, ListadoLibrosActivity.class));
+        });
+
+        findViewById(R.id.cardFormularioLibro).setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, FormularioLibroActivity.class));
+        });
+
     }
 }
